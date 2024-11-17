@@ -1542,7 +1542,7 @@ var beepbox = (function (exports) {
         }
     }
     EditorConfig.version = "0.0.9.6";
-    EditorConfig.versionDisplayName = "Unbox " + EditorConfig.version;
+    EditorConfig.versionDisplayName = "Noobox " + EditorConfig.version;
     EditorConfig.releaseNotesURL = "./patch_notes.html";
     EditorConfig.informationURL = "./information.html";
     EditorConfig.isOnMac = /^Mac/i.test(navigator.platform) || /Mac OS X/i.test(navigator.userAgent) || /^(iPhone|iPad|iPod)/i.test(navigator.platform) || /(iPhone|iPad|iPod)/i.test(navigator.userAgent);
