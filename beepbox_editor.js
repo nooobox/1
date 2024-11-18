@@ -29651,7 +29651,7 @@ li.select2-results__option[role=group] > strong:hover {
             this._cancelButton = button$k({ class: "cancelButton" });
             this._exportButton = button$k({ class: "exportButton", style: "width:45%;" }, "Export");
             this._exportMultipleBox = input$f({ style: "width: 3em; margin-left: 1em;", type: "checkbox" });
-            this._channelName = this._doc.song.channels[this._doc.channel].name == "" ? "NOB-" : this._doc.song.channels[this._doc.channel].name;
+            this._channelName = this._doc.song.channels[this._doc.channel].name == "" ? "NOB-INST-" : this._doc.song.channels[this._doc.channel].name;
             this._fileName = input$f({ type: "text", style: "width: 10em;", value: this._channelName, maxlength: 250, "autofocus": "autofocus" });
             this.container = div$k({ class: "prompt noSelection", style: "width: 200px;" }, h2$j("Export Instruments Options"), div$k({ style: "display: flex; flex-direction: row; align-items: center; justify-content: space-between;" }, "File name:", this._fileName), label$2({ style: "display: flex; flex-direction: row; align-items: center; height: 2em; justify-content: flex-end;" }, "Export all instruments", br$2(), "in channel:", this._exportMultipleBox), div$k({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between;" }, this._exportButton), this._cancelButton);
             this._close = () => {
