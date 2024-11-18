@@ -4870,7 +4870,7 @@ var beepbox = (function (exports) {
             this.rhythm = 3;
             this.layeredInstruments = false;
             this.patternInstruments = false;
-            this.title = "Unnamed";
+            this.title = "NOB-";
             document.title = this.title + " - " + EditorConfig.versionDisplayName;
             if (andResetChannels) {
                 this.pitchChannelCount = 3;
