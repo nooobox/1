@@ -2429,6 +2429,126 @@ var beepbox = (function (exports) {
     ColorConfig.colorLookup = new Map();
     ColorConfig.usesColorFormula = false;
     ColorConfig.themes = {
+		"noobox": `
+		:root {
+		--page-margin: #281d24;
+    	--editor-background: #36252a;
+    	--hover-preview: white;
+    	--playhead:rgba(231, 164, 175, 0.8);
+    	--primary-text: white;
+    	--secondary-text: #9090A3;
+    	--inverted-text: black;
+    	--text-selection:rgba(196, 68, 106, 0.68);
+    	--box-selection-fill: rgba(255, 0, 0, 0.07);
+    	--loop-accent:rgb(240, 159, 127);
+    	--link-accent: #f59a70;
+    	--ui-widget-background:rgb(82, 66, 66);
+    	--ui-widget-focus:rgb(104, 82, 82);
+    	--pitch-background: #402d35;
+    	--tonic: #92515c;
+    	--fifth-note: #5a353b;
+    	--white-piano-key: #f0e9d5;
+    	--black-piano-key: #41322f;
+    	--white-piano-key-text: #332b29;
+    	--black-piano-key-text:rgb(255, 230, 226);
+    	--use-color-formula: false;
+    	--track-editor-bg-pitch:rgb(96, 74, 73);
+    	--track-editor-bg-pitch-dim:rgb(54, 37, 42);
+    	--track-editor-bg-noise:rgb(96, 74, 73);
+    	--track-editor-bg-noise-dim: rgb(54, 37, 42);
+    	--track-editor-bg-mod:rgb(96, 74, 73);
+    	--track-editor-bg-mod-dim: rgb(54, 37, 42);
+    	--multiplicative-mod-slider:rgb(167, 141, 144);
+    	--overwriting-mod-slider: rgb(167, 145, 150);
+    	--indicator-primary:rgb(167, 127, 130);
+    	--indicator-secondary:rgb(172, 131, 137);
+    	--select2-opt-group:rgb(104, 78, 81);
+    	--input-box-outline: #9090A3;
+    	--mute-button-normal:rgb(207, 127, 134);
+    	--mute-button-mod: rgb(228, 107, 117);
+    	--pitch1-secondary-channel: #a7445e;
+    	--pitch1-primary-channel: #ea7fa2;
+    	--pitch1-secondary-note: #e26897;
+    	--pitch1-primary-note: #ff91bf;
+    	--pitch2-secondary-channel: #a75b44;
+    	--pitch2-primary-channel: #ea917f;
+    	--pitch2-secondary-note: #e27668;
+    	--pitch2-primary-note: #ff9a91;
+    	--pitch3-secondary-channel: #a76f44;
+    	--pitch3-primary-channel: #eaa77f;
+    	--pitch3-secondary-note: #e28e68;
+    	--pitch3-primary-note: #ffb091;
+    	--pitch4-secondary-channel: #a3a744;
+    	--pitch4-primary-channel: #eae77f;
+    	--pitch4-secondary-note: #e2d868;
+    	--pitch4-primary-note: #fff291;
+    	--pitch5-secondary-channel: #63a744;
+    	--pitch5-primary-channel: #a7ea7f;
+    	--pitch5-secondary-note: #9de268;
+    	--pitch5-primary-note: #c4ff91;
+    	--pitch6-secondary-channel: #589088;
+    	--pitch6-primary-channel: #7bcceb;
+    	--pitch6-secondary-note: #4b7e76;
+    	--pitch6-primary-note: #7bc7bc;
+    	--pitch7-secondary-channel: #709479;
+    	--pitch7-primary-channel:rgb(137, 126, 236);
+    	--pitch7-secondary-note: #63846b;
+    	--pitch7-primary-note: #96caa3;
+    	--pitch8-secondary-channel: #7f9458;
+    	--pitch8-primary-channel: #d073eb;
+    	--pitch8-secondary-note: #768a51;
+    	--pitch8-primary-note: #b1ce7b;
+    	--pitch9-secondary-channel: #72762e;
+    	--pitch9-primary-channel: #d074bf;
+    	--pitch9-secondary-note: #686b2a;
+    	--pitch9-primary-note: #cbd152;
+    	--pitch10-secondary-channel: #a4981e;
+    	--pitch10-primary-channel: #d07492;
+    	--pitch10-secondary-note: #92871c;
+    	--pitch10-primary-note: #e5d429;
+    	--noise1-secondary-channel: #aa8f00;
+    	--noise1-primary-channel: #ffd700;
+    	--noise1-secondary-note: #a68c01;
+    	--noise1-primary-note: #FFD700;
+    	--noise2-secondary-channel: #9c7f19;
+    	--noise2-primary-channel: #d9b123;
+    	--noise2-secondary-note: #927717;
+    	--noise2-primary-note: #d9b123;
+    	--noise3-secondary-channel: #806332;
+    	--noise3-primary-channel: #b38a46;
+    	--noise3-secondary-note: #806332;
+    	--noise3-primary-note: #b38a46;
+    	--noise4-secondary-channel: #553e42;
+    	--noise4-primary-channel: #8d6369;
+    	--noise4-secondary-note: #553e42;
+    	--noise4-primary-note: #8D6369;
+    	--noise5-secondary-channel: #3e2555;
+    	--noise5-primary-channel: #663c8c;
+    	--noise5-secondary-note: #3e2555;
+    	--noise5-primary-note: #663c8c;
+    	--mod1-secondary-channel: #548880;
+    	--mod1-primary-channel: #7bc7bc;
+    	--mod1-secondary-note: #4e7c75;
+    	--mod1-primary-note: #7bc7bc;
+    	--mod2-secondary-channel: #4c6a72;
+    	--mod2-primary-channel: #76a5b0;
+    	--mod2-secondary-note: #435d63;
+    	--mod2-primary-note: #76a5b0;
+    	--mod3-secondary-channel: #4c576d;
+    	--mod3-primary-channel: #7182a4;
+    	--mod3-secondary-note: #434c5f;
+    	--mod3-primary-note: #7182a4;
+    	--mod4-secondary-channel: #4c4369;
+    	--mod4-primary-channel: #6c5f98;
+    	--mod4-secondary-note: #322c45;
+    	--mod4-primary-note: #6c5f98;
+    	--mod-label-primary:rgb(92, 92, 196);
+    	--mod-label-secondary-text: #9090A3;
+    	--mod-label-primary-text: #FFD700;
+    	--disabled-note-primary: #9090A3;
+    	--disabled-note-secondary: #303036;
+		}
+			`,
         "unbox classic": `
 		:root {
     	--page-margin: #0d0d0d;
@@ -8582,6 +8702,7 @@ var beepbox = (function (exports) {
 					}
 				.beepboxEditor button,
 				button.playButton,
+				button.qButton,
 				button.pauseButton, 
 				button.recordButton, 
 				button.stopButton,
@@ -8894,6 +9015,7 @@ var beepbox = (function (exports) {
 					}
 					.beepboxEditor button,
 					button.playButton,
+					button.qButton,
 					button.pauseButton, 
 					button.recordButton, 
 					button.stopButton,
@@ -9616,6 +9738,7 @@ var beepbox = (function (exports) {
 	--button-size: 26px;
 	--settings-area-width: 192px;
 	--internal-play-symbol: var(--play-symbol, url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -5 -8 L -5 8 L 8 0 z" fill="gray"/></svg>'));
+	--internal-q-symbol: var(--q-symbol, url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -5 -8 L -5 8 L 8 0 z" fill="gray"/></svg>'));
 	--internal-pause-symbol: var(--pause-symbol, url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-5" y="-7" width="4" height="14" fill="gray"/><rect x="3" y="-7" width="4" height="14" fill="gray"/></svg>'));
 	--internal-record-symbol: var(--record-symbol, url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><circle cx="0" cy="0" r="6" fill="gray"/></svg>'));
 	--internal-stop-symbol: var(--stop-symbol, url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-6" y="-6" width="12" height="12" fill="gray"/></svg>'));
@@ -10603,6 +10726,27 @@ html {
 	mask-repeat: no-repeat;
 	mask-position: center;
 }
+
+.beepboxEditor button.qButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--internal-play-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--internal-play-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+
 .beepboxEditor button.pauseButton::before {
 	content: "";
 	flex-shrink: 0;
@@ -39040,7 +39184,7 @@ You should be redirected to the song at:<br /><br />
     class ThemePrompt {
         constructor(_doc) {
             this._doc = _doc;
-            this._themeSelect = select$4({ style: "width: 100%;" }, option$4({ value: "unbox classic" }, "Unbox Dark"), option$4({ value: "unbox legacy" }, "Unbox Legacy"), option$4({ value: "dark classic" }, "BeepBox Dark"), option$4({ value: "light classic" }, "BeepBox Light"), option$4({ value: "dark competition" }, "BeepBox Competition Dark"), option$4({ value: "jummbox classic" }, "JummBox Dark"), option$4({ value: "jummbox light" }, "Gold Light"), option$4({ value: "forest" }, "Forest"), option$4({ value: "canyon" }, "Canyon"), option$4({ value: "midnight" }, "Midnight"), option$4({ value: "beachcombing" }, "Beachcombing"), option$4({ value: "violet verdant" }, "Violet Verdant"), option$4({ value: "sunset" }, "Sunset"), option$4({ value: "autumn" }, "Autumn"), option$4({ value: "fruit" }, "Shadowfruit"), option$4({ value: "toxic" }, "Toxic"), option$4({ value: "roe" }, "Roe"), option$4({ value: "moonlight" }, "Moonlight"), option$4({ value: "portal" }, "Portal"), option$4({ value: "fusion" }, "Fusion"), option$4({ value: "inverse" }, "Inverse"), option$4({ value: "nebula" }, "Nebula"), option$4({ value: "roe light" }, "Roe Light"), option$4({ value: "amoled dark" }, "High Contrast Dark"), option$4({ value: "energized" }, "Energized"), option$4({ value: "neapolitan" }, "Neapolitan"), option$4({ value: "poly" }, "Poly"), option$4({ value: "blutonium" }, "Blutonium"), option$4({ value: "azur lane" }, "Azur Lane"), option$4({ value: "modbox classic" }, "Modbox"), option$4({ value: "sandbox classic" }, "Sandbox"), option$4({ value: "harrybox" }, "Haileybox"), option$4({ value: "brucebox" }, "Brucebox"), option$4({ value: "shitbox 3.0" }, "Shitbox 1.0/3.0"), option$4({ value: "shitbox 2.0" }, "Shitbox 2.0"), option$4({ value: "nerdbox" }, "NerdBox"), option$4({ value: "zefbox" }, "Zefbox"), option$4({ value: "cardboardbox classic" }, "Cardboardbox"), option$4({ value: "blubox classic" }, "Blubox"), option$4({ value: "dogebox classic" }, "Dogebox"), option$4({ value: "wackybox" }, "Wackybox"), option$4({ value: "todbox dark mode" }, "Todbox Dark Mode"), option$4({ value: "mainbox 1.0" }, "Mainbox"), option$4({ value: "microbox" }, "MicroBox"), option$4({ value: "paandorasbox" }, "PaandorasBox"), option$4({ value: "foxbox" }, "FoxBox"), option$4({ value: "midbox" }, "Midbox"), option$4({ value: "dogebox2" }, "Dogebox2"), option$4({ value: "AbyssBox Classic" }, "AbyssBox Classic"), option$4({ value: "AbyssBox Light" }, "AbyssBox Light"), option$4({ value: "nepbox" }, "Nepbox"), option$4({ value: "custom" }, "Custom"));
+            this._themeSelect = select$4({ style: "width: 100%;" }, option$4({ value: "noobox" }, "Leading Brand Noobox-type"), option$4({ value: "unbox classic" }, "Unbox Dark"), option$4({ value: "unbox legacy" }, "Unbox Legacy"), option$4({ value: "dark classic" }, "BeepBox Dark"), option$4({ value: "light classic" }, "BeepBox Light"), option$4({ value: "dark competition" }, "BeepBox Competition Dark"), option$4({ value: "jummbox classic" }, "JummBox Dark"), option$4({ value: "jummbox light" }, "Gold Light"), option$4({ value: "forest" }, "Forest"), option$4({ value: "canyon" }, "Canyon"), option$4({ value: "midnight" }, "Midnight"), option$4({ value: "beachcombing" }, "Beachcombing"), option$4({ value: "violet verdant" }, "Violet Verdant"), option$4({ value: "sunset" }, "Sunset"), option$4({ value: "autumn" }, "Autumn"), option$4({ value: "fruit" }, "Shadowfruit"), option$4({ value: "toxic" }, "Toxic"), option$4({ value: "roe" }, "Roe"), option$4({ value: "moonlight" }, "Moonlight"), option$4({ value: "portal" }, "Portal"), option$4({ value: "fusion" }, "Fusion"), option$4({ value: "inverse" }, "Inverse"), option$4({ value: "nebula" }, "Nebula"), option$4({ value: "roe light" }, "Roe Light"), option$4({ value: "amoled dark" }, "High Contrast Dark"), option$4({ value: "energized" }, "Energized"), option$4({ value: "neapolitan" }, "Neapolitan"), option$4({ value: "poly" }, "Poly"), option$4({ value: "blutonium" }, "Blutonium"), option$4({ value: "azur lane" }, "Azur Lane"), option$4({ value: "modbox classic" }, "Modbox"), option$4({ value: "sandbox classic" }, "Sandbox"), option$4({ value: "harrybox" }, "Haileybox"), option$4({ value: "brucebox" }, "Brucebox"), option$4({ value: "shitbox 3.0" }, "Shitbox 1.0/3.0"), option$4({ value: "shitbox 2.0" }, "Shitbox 2.0"), option$4({ value: "nerdbox" }, "NerdBox"), option$4({ value: "zefbox" }, "Zefbox"), option$4({ value: "cardboardbox classic" }, "Cardboardbox"), option$4({ value: "blubox classic" }, "Blubox"), option$4({ value: "dogebox classic" }, "Dogebox"), option$4({ value: "wackybox" }, "Wackybox"), option$4({ value: "todbox dark mode" }, "Todbox Dark Mode"), option$4({ value: "mainbox 1.0" }, "Mainbox"), option$4({ value: "microbox" }, "MicroBox"), option$4({ value: "paandorasbox" }, "PaandorasBox"), option$4({ value: "foxbox" }, "FoxBox"), option$4({ value: "midbox" }, "Midbox"), option$4({ value: "dogebox2" }, "Dogebox2"), option$4({ value: "AbyssBox Classic" }, "AbyssBox Classic"), option$4({ value: "AbyssBox Light" }, "AbyssBox Light"), option$4({ value: "nepbox" }, "Nepbox"), option$4({ value: "custom" }, "Custom"));
             this._cancelButton = button$6({ class: "cancelButton" });
             this._okayButton = button$6({ class: "okayButton", style: "width:45%;" }, "Okay");
             this.container = div$6({ class: "prompt noSelection", style: "width: 220px;" }, h2$5("Set Theme"), div$6({ style: "display: flex; flex-direction: row; align-items: center; height: 2em; justify-content: flex-end;" }, div$6({ class: "selectContainer", style: "width: 100%;" }, this._themeSelect)), div$6({ style: "display: flex; flex-direction: row-reverse; justify-content: space-between;" }, this._okayButton), this._cancelButton);
